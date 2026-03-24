@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub PR Auto Viewed - 設定</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">
+      <span class="icon">✓</span> Auto Viewed
+    </h1>
+    <p class="description">
+      以下のパターンで終わるファイルを一括でViewedにします（末尾一致）
+    </p>
+
+    <div class="section">
+      <h2 class="section-title">ファイルパターン</h2>
+      <ul id="pattern-list" class="pattern-list">
+        <!-- JSで動的生成 -->
+      </ul>
+    </div>
+
+    <div class="add-section">
+      <input
+        type="text"
+        id="new-pattern"
+        class="pattern-input"
+        placeholder="例: _gen.go"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button id="add-btn" class="btn btn-primary">追加</button>
+    </div>
+
+    <div id="status" class="status" aria-live="polite"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
