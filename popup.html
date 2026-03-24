@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Github PR Auto Viewed</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">
+      <span class="icon">✓</span> Auto Viewed
+    </h1>
+
+    <!-- Files changedページを開いている時だけ表示 -->
+    <div id="action-section" class="action-section" hidden>
+      <button id="mark-btn" class="btn btn-primary btn-block">
+        対象ファイルを一括 Viewed にする
+      </button>
+      <div id="action-status" class="status" aria-live="polite"></div>
+    </div>
+
+    <!-- Files changedページ以外では案内を表示 -->
+    <div id="not-on-files" class="hint">
+      GitHub PR の<br>「Files changed」タブを開くと<br>実行ボタンが表示されます
+    </div>
+
+    <hr class="divider">
+
+    <div class="section">
+      <h2 class="section-title">対象パターン <span class="section-note">ファイル名・パスに含まれれば対象</span></h2>
+      <ul id="pattern-list" class="pattern-list"></ul>
+    </div>
+
+    <div class="add-section">
+      <input
+        type="text"
+        id="new-pattern"
+        class="pattern-input"
+        placeholder="例: _gen.go, vendor/"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button id="add-btn" class="btn btn-secondary">追加</button>
+    </div>
+
+    <div id="status" class="status" aria-live="polite"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
