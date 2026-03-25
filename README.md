@@ -2,6 +2,8 @@
 
 GitHub の Pull Request「Files changed」タブで、指定したパターンに一致するファイルを一括で「Viewed」にする Chrome 拡張です。
 
+<img src="./docs/image.png" width="500">
+
 ## 機能
 
 - **ポップアップから一括実行** — 拡張アイコンをクリックして「対象ファイルを一括 Viewed にする」ボタンを押すだけ
